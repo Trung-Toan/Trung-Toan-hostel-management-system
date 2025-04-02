@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidEmail {
-    String message() default "Email must be valid and from allowed domains (gmail.com, yahoo.com, outlook.com, example.vn)";
+    String message() default "USER_EMAIL_VALID_DOMAINS";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

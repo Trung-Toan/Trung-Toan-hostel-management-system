@@ -55,7 +55,7 @@ public class Invoice {
     private Double totalAmount;
 
     @Column(name = "status")
-    private Byte status = 0;
+    private Integer status = 0;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();

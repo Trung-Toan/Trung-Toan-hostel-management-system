@@ -1,8 +1,8 @@
-package t3h.hostelmanagementsystem.service;
+package t3h.hostelmanagementsystem.service.room;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import t3h.hostelmanagementsystem.dto.RoomDTO;
+import t3h.hostelmanagementsystem.dto.request.RoomDTO;
 import t3h.hostelmanagementsystem.entity.Hostel;
 import t3h.hostelmanagementsystem.entity.Room;
 import t3h.hostelmanagementsystem.mapper.RoomMapper;

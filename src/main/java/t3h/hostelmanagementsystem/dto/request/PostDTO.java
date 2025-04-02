@@ -1,4 +1,4 @@
-package t3h.hostelmanagementsystem.dto;
+package t3h.hostelmanagementsystem.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,25 +13,24 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PostDTO {
-    @NotNull(message = "ID cannot be null")
     private Long id;
 
-    @NotNull(message = "User cannot be null")
+    @NotNull(message = "POST_USER_NULL")
     private UserDTO user;
 
-    @NotNull(message = "Hostel cannot be null")
+    @NotNull(message = "POST_HOSTEL_NULL")
     private HostelDTO hostel;
 
-    @NotBlank(message = "Title cannot be blank")
-    @Size(max = 255, message = "Title cannot exceed 255 characters")
+    @NotBlank(message = "POST_TITLE_BLANK")
+    @Size(max = 255, message = "POST_TITLE_SIZE")
     private String title;
 
-    @NotBlank(message = "Content cannot be blank")
-    @Size(max = 5000, message = "Content cannot exceed 5000 characters")
+    @NotBlank(message = "POST_CONTENT_BLANK")
+    @Size(max = 5000, message = "POST_CONTENT_SIZE")
     private String content;
 
-    @NotNull(message = "Status cannot be null")
-    private Byte status;
+    @NotNull(message = "POST_STATUS_NULL")
+    private Integer status;
 
     private LocalDateTime createdAt; // Không validate
     private LocalDateTime updatedAt; // Không validate

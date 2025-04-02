@@ -37,7 +37,7 @@ public class Post {
     private String content;
 
     @Column(name = "status")
-    private Byte status = 1;
+    private Integer status = 1;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt = LocalDateTime.now();

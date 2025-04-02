@@ -1,4 +1,4 @@
-package t3h.hostelmanagementsystem.dto;
+package t3h.hostelmanagementsystem.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,25 +13,25 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CustomerRoomDTO {
-    @NotNull(message = "Customer ID cannot be null")
+    @NotNull(message = "CUSTOMER_ID_NULL")
     private Long customerId;
 
-    @NotNull(message = "Room ID cannot be null")
+    @NotNull(message = "ROOM_ID_NULL")
     private Long roomId;
 
-    @NotNull(message = "Customer cannot be null")
+    @NotNull(message = "CUSTOMER_NULL")
     private UserDTO customer;
 
-    @NotNull(message = "Room cannot be null")
+    @NotNull(message = "ROOM_NULL")
     private RoomDTO room;
 
-    @NotNull(message = "Start date cannot be null")
-    @PastOrPresent(message = "Start date must be in the past or present")
+    @NotNull(message = "START_DATE_BLANK")
+    @PastOrPresent(message = "START_DATE_PAST_OR_PRESENT")
     private LocalDate startDate;
 
-    @FutureOrPresent(message = "End date must be in the present or future")
+    @FutureOrPresent(message = "END_DATE_FUTURE_OR_PRESENT")
     private LocalDate endDate;
 
-    @NotNull(message = "Status cannot be null")
-    private Byte status;
+    @NotNull(message = "STATUS_NULL")
+    private Integer status;
 }

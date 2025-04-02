@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidPhoneNumber {
-    String message() default "Phone number must be a valid Vietnamese format (e.g., +84123456789)";
+    String message() default "USER_PHONE_NUMBER_VALID";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

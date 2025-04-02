@@ -1,4 +1,4 @@
-package t3h.hostelmanagementsystem.dto;
+package t3h.hostelmanagementsystem.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,15 +10,15 @@ import jakarta.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RoomUtilityDTO {
-    @NotNull(message = "Room ID cannot be null")
+    @NotNull(message = "ROOM_UTILITY_ROOM_ID_NULL")
     private Long roomId;
 
-    @NotNull(message = "Utility ID cannot be null")
+    @NotNull(message = "ROOM_UTILITY_UTILITY_ID_NULL")
     private Long utilityId;
 
-    @NotNull(message = "Room cannot be null")
+    @NotNull(message = "ROOM_UTILITY_ROOM_NULL")
     private RoomDTO room;
 
-    @NotNull(message = "Utility cannot be null")
+    @NotNull(message = "ROOM_UTILITY_UTILITY_NULL")
     private UtilityDTO utility;
 }
